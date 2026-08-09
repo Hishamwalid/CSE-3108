@@ -5,6 +5,8 @@ Lab evaluation work for **CSE-3108 Web Programming** at BAUET.
 **Student:** Hisham Walid (CSE, 3rd year)
 **ID:** 0812410205101031
 
+**Live:** https://hishamwalid.github.io/CSE-3108/
+
 ## Contents
 
 - `index.html` — Index of all lab evaluations; click an entry to open that evaluation's page.
