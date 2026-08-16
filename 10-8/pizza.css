@@ -1,0 +1,181 @@
+/* 1. CSS VARIABLES (Theme Colors & Local System Fonts) */
+:root {
+  --paper: #F8F5EF;
+  --surface: #F0EDE5;
+  --ink: #1D1A16;
+  --stone: #7A7066;
+  --rule: #D8D1C5;
+  --accent: #7B3928;
+  --serif-font: 'Georgia', 'Garamond', 'Times New Roman', serif;
+  --sans-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* 2. UNIVERSAL RESET */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. PAGE BODY & CONTAINER */
+body {
+  font-family: var(--sans-font);
+  background-color: var(--paper);
+  color: var(--ink);
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* 4. HEADER & PROFILE IMAGE */
+header {
+  background-color: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+header img {
+  width: 160px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid var(--accent);
+  margin-bottom: 0.75rem;
+  transform: scaleX(-1);
+}
+
+header h1 {
+  font-family: var(--serif-font);
+  font-size: 2.2rem;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+header p em {
+  color: var(--stone);
+  font-style: italic;
+  font-size: .75rem;
+}
+
+/* 5. DIVIDERS (HR) */
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 1.5rem 0;
+}
+
+/* 6. MAIN CONTENT & SECTIONS */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+section {
+  background-color: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+}
+
+section h2 {
+  font-family: var(--serif-font);
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+section p {
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+section p strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+section table strong{
+  color: var(--accent);
+  font-weight: 600;
+}
+
+section ul strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+/* 7. LISTS (OL & UL) */
+ol, ul {
+  margin-top: 0.5rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+/* 7a. INSTRUCTIONS LIST — ROUND NUMBER BADGES */
+section ol {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: step;
+}
+
+section ol li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 2.75rem;
+}
+
+section ol li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 8. LINKS (A) */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #5A2A1C;
+  text-decoration: underline;
+}
+
+/* 9. FOOTER */
+footer {
+  text-align: center;
+  color: var(--stone);
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+}
