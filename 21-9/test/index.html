@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pokédex</title>
+<meta name="description" content="Search any Pokémon by name or National Pokédex number. Artwork, stats, moves, evolutions and 3D models.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css?v=23">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="logo" href="./">Pokédex</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="search" aria-labelledby="lead">
+    <div class="search-art" aria-hidden="true">
+      <svg viewBox="0 0 240 240" role="presentation">
+        <circle cx="120" cy="120" r="86" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M34 120h172" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M60 58a86 86 0 0 1 120 0Z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="120" cy="120" r="24" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="120" cy="120" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="lead-copy">
+      <h1 id="lead">Explore the Pokémon world.</h1>
+      <p class="sub">Search any Pokémon by name or National Pokédex number. Discover detailed information, base stats, moves, evolution history and 3D models.</p>
+    </div>
+    <form id="form" role="search" autocomplete="off">
+      <label class="sr" for="q">Search Pokémon by name or number</label>
+      <div class="sbox">
+        <input id="q" type="search" placeholder="Search Pokémon, e.g. umbreon or 197" spellcheck="false" autocapitalize="none" autocomplete="off" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="suggest">
+        <button type="submit">Search</button>
+        <ul id="suggest" class="suggest" role="listbox" hidden></ul>
+      </div>
+    </form>
+    <div id="history" class="history" hidden>
+      <span>Recent searches</span>
+      <div id="chips" class="chips"></div>
+      <button id="clear" class="link" type="button">Clear</button>
+    </div>
+    <p id="hint" class="sub small">Your recent searches will appear here.</p>
+  </section>
+
+  <p id="page-status" class="sr" role="status" aria-live="polite"></p>
+  <section id="view"></section>
+</main>
+
+<footer id="about" class="wrap foot">
+  Data from <a href="https://pokeapi.co/" rel="noopener">PokéAPI</a>. 3D models from the unofficial Pokémon 3D API. Pokémon is a trademark of Nintendo, Game Freak and Creatures Inc. Fan project, not affiliated.
+</footer>
+
+<dialog id="zoom" aria-label="Enlarged artwork">
+  <img alt="">
+  <button type="button" class="link" id="zoom-close">Close</button>
+</dialog>
+
+<script src="script.js?v=23"></script>
+</body>
+</html>
