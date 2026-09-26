@@ -12,7 +12,7 @@ Lab evaluation work for **CSE-3108 Web Programming** at BAUET.
 - `index.html` — Index of all lab evaluations; click an entry to open that evaluation's page.
 - `form/` — Lab Evaluation Task One: BAUET Tech Fest 2026 registration form.
 - `10-8/` — Lab Evaluation Task Two: Classic Margherita Pizza recipe page.
-- `21-9/test/` — Lab Evaluation Task Three: API Evaluation — a Pokédex web app built on the PokéAPI (Fetch API, async JavaScript, search, stats, evolutions and 3D models).
+- `pok-api/` — Lab Evaluation Task Three: API Evaluation — a Pokédex web app built on the PokéAPI (Fetch API, async JavaScript, search, stats, evolutions and 3D models).
 
 Each lab evaluation lives in its own folder with its own HTML, CSS, and images kept together.
 
